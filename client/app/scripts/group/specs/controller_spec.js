@@ -19,58 +19,58 @@ describe('Controller: select group', function () {
     // -----------------------------add my code-----------------------------
     // --------------------------nueva generacion --------------------------
     it('should', function () {
-      var x = scope.suma(6, 1);
-      expect(x).toBe(7);
+      // var x = scope.suma(6, 1);
+      // expect(x).toBe(7);
 
-      x = scope.suma(6, 3);
-      expect(x).toBe(9);
+      // x = scope.suma(6, 3);
+      // expect(x).toBe(9);
 
-       x = scope.suma(null, 3);
-      expect(x).toBe(3);
+      //  x = scope.suma(null, 3);
+      // expect(x).toBe(3);
 
 
-       x = scope.suma(9, null);
-      expect(x).toBe(9);
+      //  x = scope.suma(9, null);
+      // expect(x).toBe(9);
 
-       x = scope.suma(null, null);
-      expect(x).toBe(0);
+      //  x = scope.suma(null, null);
+      // expect(x).toBe(0);
 
-      // vprueba multiplicacion
-          // prueba 1
-      var y = scope.multiplicacion(2, 2);
-          expect(y).toBe(4);
-          // prueba 2
-          y = scope.multiplicacion(2, 4);
-          expect(y).toBe(8);
+      // // vprueba multiplicacion
+      //     // prueba 1
+      // var y = scope.multiplicacion(2, 2);
+      //     expect(y).toBe(4);
+      //     // prueba 2
+      //     y = scope.multiplicacion(2, 4);
+      //     expect(y).toBe(8);
     });
   });
 
   describe('On instance', function () {
     // proceso validacion
     iit('should be equal to fffgfg', function () {
-      var datos = [
-        ['1009','2011'],
-        ['1097','2011']
-      ];
+      // var datos = [
+      //   ['1009','2011'],
+      //   ['1097','2011']
+      // ];
       // prueba existencia
-      var res = scope.validacion(datos);
-          expect(res).toBe(true);
+      // var res = scope.validacion(datos);
+      //     expect(res).toBe(true);
 
-          res = scope.validacion([]);
-          expect(res).toBe(false);
-          // prueba comparacion dato1 1000 - 1999
-          res = scope.datos([]);
-          expect(res).toBe(false);
+      //     res = scope.validacion([]);
+      //     expect(res).toBe(false);
+      //     // prueba comparacion dato1 1000 - 1999
+      //     res = scope.datos([]);
+      //     expect(res).toBe(false);
 
-          res = scope.datos(datos);
-          expect(res).toBe(true);
+      //     res = scope.datos(datos);
+      //     expect(res).toBe(true);
 
-          // funcionario
-          res = scope.proceso_estocolmo(datos);
-          expect(res).toBe(true);
+      //     // funcionario
+      //     res = scope.proceso_estocolmo(datos);
+      //     expect(res).toBe(true);
 
-          res = scope.proceso_estocolmo([]);
-          expect(res).toBe(false);
+      //     res = scope.proceso_estocolmo([]);
+      //     expect(res).toBe(false);
 
           // res = scope.proceso('');
           // expect(res).toBe(false);

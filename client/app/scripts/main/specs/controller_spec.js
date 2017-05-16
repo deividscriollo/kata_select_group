@@ -17,5 +17,4 @@ describe('Controller: Main', function () {
       expect(scope.controller_loaded).toContain('loaded');
     });
   });
-
 });

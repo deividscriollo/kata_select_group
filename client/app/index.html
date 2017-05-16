@@ -7,13 +7,28 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- <link rel="stylesheet" href="styles/main.css"> -->
 
   </head>
   <body ng-app="App" ontouchstart="" onmouseover="">
     <h1>General App</h1>
     <div ng-controller="Main">
       <h2>Controller status: {{controller_loaded || 'not loaded!'}}</h2>
+        <ul>
+          <li ng-repeat="item in datos">{{item}}</li>
+        </ul>
+      <hr>
+      <button ng-click="btn_click()">GENERAR</button>
+      <hr>
+      Seleccionados de Estocolmo:
+      <ul>
+        <li ng-repeat="item in estocolmo">{{item.val}}</li>
+      </ul>
+      <hr>
+      Seleccionados de Londres:
+      <ul>
+        <li ng-repeat="item in estocolmo">{{item.val}}</li>
+      </ul>
       <div ng-view ng-cloak></div>
     </div>
 
