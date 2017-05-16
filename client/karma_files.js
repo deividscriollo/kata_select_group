@@ -4,7 +4,7 @@ module.exports = [
   'app/bower_components/angular/angular.js',
   'app/bower_components/angular-route/angular-route.js',
   'app/bower_components/angular-mocks/angular-mocks.js',
-  'app/bower_components/angular-sanitize/angular-sanitize.js',
+  // 'app/bower_components/angular-sanitize/angular-sanitize.js',
   'app/scripts/**/*module.js',
   'app/scripts/**/*.js',
 ];

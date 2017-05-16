@@ -15,6 +15,9 @@ describe('Controller: Main', function () {
   describe('On instance', function(){
     it('should set "controller_loaded" variable in scope', function() {
       expect(scope.controller_loaded).toContain('loaded');
-    });
+      var x = scope.validacion_estocolmo('2');  
+              expect(x).toBe(true);
+    });      
   });
 });
+

@@ -1,8 +1,12 @@
 'use strict';
 
 angular.module('App', [
-  'ngRoute',
-  'Group'
+  	'ngRoute',
+  	'Group',
+  	'ngAnimate',
+  	'ngAria',
+  	'ngMessages',
+  	'ngMaterial'
 ])
 .config(function ($routeProvider) {
   $routeProvider

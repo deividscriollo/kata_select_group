@@ -1,5 +1,63 @@
-<h3>Group</h3>
-<br>
-<div>
-  <br><a href="#/" class="kataFont">Homestack</a>
-</div>
+<div flex  layout-padding>
+            <h1 layout="row" layout-align="center">Paso 1 Ingresos</h1>
+            <form name="formreg" ng-submit="registrar()" >
+                <div layout="row">
+                    <md-input-container flex>
+                        <label>Estocolmo</label>
+                        <input required name="data.estocolmo" ng-model="data.estocolmo">
+                        <div ng-messages="formreg.estocolmo.$error" ng-show="formreg.estocolmo.$dirty">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                    <div flex="5"></div>
+                    <md-input-container flex>
+                        <label>Londres</label>
+                        <input required name="data.londres" ng-model="data.londres">
+                        <div ng-messages="formreg.londres.$error" ng-show="formreg.londres.$dirty">
+                            <div ng-message="required">This is required.</div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <div layout="row" layout-align="center" class="md-block animated zoomIn" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+                    <md-button class="md-raised md-primary" type="submit" ng-disabled="formreg.$invalid"><md-icon>add</md-icon> Agregar</md-button>
+                </div>
+            </form>
+        </div>
+        <div flex="20" layout-padding>
+            <h2 layout-align="center">Datos Generados</h2>
+            <md-list>
+                <md-list-item >
+                    <p>Estocolmo</p>
+                    <p>Londres</p>
+                </md-list-item>
+                <md-list-item  ng-repeat="item in datos">
+                    <p>{{item[0]}}</p>
+                    <p> {{item[1]}}</p>
+                </md-list-item>
+            </md-list>
+        </div>
+        <div flex layout-padding>
+            <div flex layout="row">
+                <md-button class="md-raised md-accent" ng-click="btn_click()">GENERAR RESULTADO</md-button>
+            </div>            
+            <div flex>
+                <div layout="row" >
+                    <div flex>
+                        <md-subheader class="md-no-sticky">Seleccionados de Estocolmo</md-subheader>
+                        <md-list>
+                            <md-list-item class="secondary-button-padding" ng-repeat="item in estocolmo">
+                                <p>{{item.val}}</p>
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                    <div flex>
+                        <md-subheader class="md-no-sticky">Seleccionados de Londres</md-subheader>
+                        <md-list>
+                            <md-list-item class="secondary-button-padding" ng-repeat="item in londres">
+                                <p>{{item.val}}</p>
+                            </md-list-item>
+                        </md-list>
+                    </div>
+                </div>
+            </div>
+        </div>
